@@ -7,7 +7,7 @@ const Form = () => {
   const [numberStringName, setNumberStringName] = useState();
   
   return (
-      <form>
+      <div className="form-container" data-testid='test-1'>
         <h2>Convert your number</h2>
         <input
           type="number"
@@ -17,9 +17,9 @@ const Form = () => {
           onChange={(e) => setNumber(e.target.value)}
         />
 
-        <button onClick={(e) => setNumberStringName(numberConverter(e, number))}>Convert</button>
+        <button onClick={() => setNumberStringName(numberConverter(number))}>Convert</button>
         <h3> {numberStringName} </h3>
-      </form>
+      </div>
   );
 };
 
