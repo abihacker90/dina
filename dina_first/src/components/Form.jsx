@@ -17,8 +17,8 @@ const Form = () => {
           onChange={(e) => setNumber(e.target.value)}
         />
 
-        <button onClick={(e) => setNumberStringName()}>Convert</button>
-        <h3>Output: {numberStringName} </h3>
+        <button onClick={(e) => setNumberStringName(numberConverter(e, number))}>Convert</button>
+        <h3> {numberStringName} </h3>
       </form>
   );
 };
