@@ -6,7 +6,7 @@ The application translates the given number to its english name.
 E.g. 10 equals to 'ten'.
 
 
-The Application was developed in React, styled in basic CSS.
+The Application was developed in React, styled in CSS.
 The test were written in Jest.
 
 ## Available Scripts

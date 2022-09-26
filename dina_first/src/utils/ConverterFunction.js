@@ -45,8 +45,11 @@ const numberConverter = (number) => {
   let numberArr = ("0000000" + numberInput)
     .slice(-7)
     .match(/^(\d{1})(\d{1})(\d{2})(\d{1})(\d{2})$/);
+
   console.log(numberArr);
+
   if (!numberArr) return;
+  
   //console.log(numberArr[0], numberArr[1], numberArr[2], numberArr[3], numberArr[4], numberArr[5])
   outputText =
     numberArr[1] != 0
@@ -56,10 +59,11 @@ const numberConverter = (number) => {
             digitsToNineteenArr[numberArr[1][1]]) + "million "
       : "";
 
+
   if (numberArr[2] != 0 && numberArr[3] % 10 == 0) {
     outputText +=
       digitsToNineteenArr[Number(numberArr[2])] + "hundred thousand ";
-  } else if (numberArr[2] != 0) {
+  } else if (numberArr[2] != 0 && numberArr[3] != 0) {
     outputText +=
       (digitsToNineteenArr[Number(numberArr[2])] ||
         decimals[numberArr[2][0]] +
