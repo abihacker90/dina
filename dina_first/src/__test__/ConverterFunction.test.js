@@ -39,3 +39,6 @@ test("convert 10.000.000", () => {
 test("convert 0", () => {
   expect(numberConverter(0)).toEqual('zero')
 })
+test("convert -1", () => {
+  expect(numberConverter(-1)).toEqual('Only positive integers allowed')
+})
