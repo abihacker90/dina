@@ -42,6 +42,16 @@ const numberConverter = (number) => {
     return outputText;
   }
 
+  if (numberInput < 0) {
+    outputText = "Only positive integers allowed";
+    return outputText;
+  }
+
+  if (numberInput == 0) {
+    outputText = "zero";
+    return outputText;
+  }
+
   let numberArr = ("0000000" + numberInput)
     .slice(-7)
     .match(/^(\d{1})(\d{1})(\d{2})(\d{1})(\d{2})$/);
@@ -108,14 +118,7 @@ const numberConverter = (number) => {
   } else {
     outputText += "";
   }
-
-  if (numberInput == 0) {
-    outputText = "zero";
-  }
-  if (numberInput < 0) {
-    outputText = "Only positive integers allowed";
-  }
-
+  
   return outputText;
 };
 
