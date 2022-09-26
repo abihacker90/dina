@@ -24,7 +24,7 @@ test("convert 42342 to forty two thousand three hundred and forty - two", () => 
   expect(numberConverter(42342)).toEqual('forty  two  thousand three  hundred and forty - two ');
 })
 
-test("convert 322132 to three hundred and twenty one thousand one hundred and thirty-two ", () => {
+test("convert 322132 to three hundred and twenty two thousand one hundred and thirty-two ", () => {
   expect(numberConverter(322132)).toEqual('three hundred and twenty  two  thousand one  hundred and thirty - two ');
 })
 
